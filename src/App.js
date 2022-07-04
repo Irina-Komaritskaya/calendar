@@ -1,25 +1,17 @@
-import logo from './logo.svg';
-import './App.css';
-
+import { Test } from "../src/components/test";
+import { baseTheme } from "../src/styles/theme";
+import { ThemeProvider } from "styled-components";
+import GlobalStyles from "../src/styles/global";
+import GlobalFonts from "./fonts/fonts";
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <ThemeProvider theme={baseTheme}>
+            <GlobalFonts />
+            <GlobalStyles />
+
+            <Test />
+        </ThemeProvider>
+    );
 }
 
 export default App;
