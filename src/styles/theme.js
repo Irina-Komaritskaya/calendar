@@ -22,7 +22,7 @@ export const baseTheme = {
 
         textLarge: css`
             font-size: 2em;
-            font-weight: 700;
+            font-weight: 100;
         `,
     },
 
